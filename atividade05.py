@@ -17,3 +17,7 @@ match media:
         print('Recuperação')
     case media if media < 3:
         print('Reprovado') 
+
+## lição aprendida: não é necessário fazer todos os casos do if, é dizer, se não é ou é cumprida uma
+## condição somente pode-se trabalhar com uma das condições tendo em conta que as
+## variáveis já foram declaradas e mantém seus valores.
