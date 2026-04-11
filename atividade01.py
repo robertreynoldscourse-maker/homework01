@@ -12,3 +12,6 @@ match media:
         print('Recuperação')
     case media if media < 5:
         print('Reprovado')
+
+
+
