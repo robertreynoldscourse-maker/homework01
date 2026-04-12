@@ -1,17 +1,13 @@
-prova1 = float(input('Digite a nota da prova 1: '))
-while prova1<0 or prova1>10:
-    print('ERRO! Digite uma nota entre 0 e 10.')
-    prova1 = float(input('Digite novamente a nota da prova 1: '))
 
-prova2 = float(input('Digite a nota da prova 2: '))
-while prova2<0 or prova2>10:
-    print('ERRO! Digite uma nota entre 0 e 10.')
-    prova2 = float(input('Digite novamente a nota da prova 2: '))
+def pedir_nota(mensagem):
+    nota = float(input(mensagem))
+    while (nota < 0 or nota > 10) and nota != -1:
+        nota = float(input('ERRO! Digite novamente una nota entre 0 e 10: '))
+    return nota
 
-prova_substitutiva = float(input('Digite a nota da prova substitutiva.\n(caso não tenha feito digite -1): '))
-while (prova_substitutiva<0 or prova_substitutiva>10) and prova_substitutiva != -1:
-    print('ERRO! Digite uma nota entre 0 e 10.')
-    prova_substitutiva = float(input('Digite novamente a nota da prova substitutiva: '))
+prova1 = pedir_nota('Digite a nota da prova 1: ')
+prova2 = pedir_nota('Digite a nota da prova 2: ')
+prova_substitutiva = pedir_nota('Digite a nota da prova substitutiva.\n(caso não tenha feito digite -1): ')
 
 if prova_substitutiva != -1:
     if prova1 <= prova2 and prova_substitutiva >= prova1:
